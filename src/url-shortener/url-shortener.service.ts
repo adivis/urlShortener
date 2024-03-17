@@ -55,7 +55,10 @@ export class UrlShortenerService {
       if (!id.equals(user._id)) {
         throw new NotFoundException('Not such url present.');
       }
-      return url.analytics;
+      const analytics = { clicks: url.clicks };
+      analytics['analytics'] = url.analytics;
+
+      return analytics;
     }
     throw new NotFoundException('Not such url present.');
   }
