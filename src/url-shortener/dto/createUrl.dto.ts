@@ -1,5 +1,5 @@
 import { IsEmpty, IsNotEmpty, IsString, IsUrl } from 'class-validator';
-import { User } from 'src/auth/schemas/users.schema';
+import { User } from '../../auth/schemas/users.schema';
 import { AnalyticsInterface } from '../interfaces/analytics.interface';
 
 export class CreateUrlDto {
